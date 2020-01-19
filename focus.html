@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fokus</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0;padding: 0;
+		}
+		* {
+		}
+    p:focus {
+      background: oldlace;
+    }
+    h1:focus,
+		h2:focus {
+			background: olive;
+		}
+		.panel {
+			display: flex;
+		}
+		.panel {
+      align-items: baseline;
+		}
+		.panel * {
+			margin:0;
+			flex: 1;
+			padding: 0 1em;
+			border-right: 1px solid olive;
+			min-height: 100vh;
+		}
+		.panel p:last-of-type {
+		  border-right: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="panels">
+		<div class="panel">
+			<h1 id="p1">Fokus</h1>
+			<h2 id="p2">Fokus ponownie</h2>
+			<p id="p3">Tu także fokus. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+  <script type="text/javascript">
+  window.onload = function() {
+    console.log('ok');
+    const x = document.getElementById("p1"); 
+    const y = document.getElementById("p2"); 
+    const z = document.getElementById("p3"); 
+    x.tabIndex = 0;
+    y.tabIndex = 0;
+    z.tabIndex = 0;        
+  };
+</script>
+</body>
+</html>
